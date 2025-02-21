@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de JavaScript</h1>
+        <div>
+            <h3>Eventos</h3>
+            <ul>
+                <li><a href="#onfocus">OnFocus</a></li>
+                <li><a href="#onreset">OnReset</a></li>
+            </ul>
+            <h3>Propiedades</h3>
+            <ul>
+                <li><a href="#localStorage">window.localStorage</a></li>
+                <li><a href="#getElementsByTagName">document.getElementsByTagName</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h2 id="onfocus">OnFocus</h2>
+        <p>Este ejemplo muestra como usar el evento onfocus</p>
+        <p>El evento onfocus se dispara cuando el elemento recibe el foco, es decir es seleccionado por el usuario</p>
+        <p>Este evento se diferencia de onclick porque el elemento puede recibir el foco por varias razones, por
+            ejemplo:
+        </p>
+        <form onsubmit="noFormAction(event)">
+            <input type="text" onfocus="focusOnInput()" />
+            <input type="checkbox" onfocus="focusOnCheckbox()" />
+            <button onfocus="focusOnButton()">Foco en el button</button>
+        </form>
+        <p id="onfocus-label"></p>
+
+
+        <h2 id="onreset">OnReset</h2>
+        <p>Este ejemplo muestra como usar el evento onreset</p>
+        <p>Para usar onreset, se debe de usar en un &lt;form /&gt; que permita el control de varios elementos tipo input
+            y al cual se le hará el reseteo</p>
+        <p>En este caso se usa el evento onreset para mostrar un mensaje en la pantalla cuando se hace el reseteo del
+            formulario</p>
+
+        <form id="reset-form" onsubmit="noFormAction(event)" onreset="handleReset()">
+            <input type="text" />
+            <input type="checkbox" />
+            <input type="number" />
+            <button type="reset">Reset</button>
+        </form>
+        <p id="onreset-label"></p>
+
+        <h2 id="localStorage">window.LocalStorage</h2>
+
+        <p>la función de localStorage es una forma de almacenar información en el navegador, es decir en el cliente, en
+            este caso en el navegador de escritorio</p>
+        <p>Para usar localStorage, se debe de crear una variable de tipo localStorage y asignar un valor a ella</p>
+        <code>localStorage.setItem('nombreVariable', 'valor');</code>
+        <p>Para leer el valor de una variable, se debe de usar el método getItem</p>
+        <code>localStorage.getItem('nombreVariable');</code>
+        <p>puedes probar el funcionamiento de localStorage aquí</p>
+        <h3>Guardar en localStorage</h3>
+        <form onsubmit="handleSaveKey(event)">
+            <label for="key">Key</label>
+            <input type="text" placeholder="Key" name="key" />
+            <label for="value">Value</label>
+            <input type="text" placeholder="Value" name="value" />
+            <button type="submit">Guardar</button>
+        </form>
+        <div id="localStorage-save-label"></div>
+        <h3>Leer de localStorage</h3>
+        <form onsubmit="handleReadKey(event)">
+            <input type="text" placeholder="Key" name="key" />
+            <button type="submit">Leer</button>
+        </form>
+        <div id="localStorage-read-label"></div>
+
+        <h2 id="getElementsByTagName">document.getElementByTagName</h2>
+        <p>Este ejemplo muestra como usar el método getElementByTagName</p>
+        <p>El método <strong>getElementByTagName</strong> devuelve la lista de elementos que coincidan con el nombre de
+            etiqueta que se le pasa como parámetro</p>
+
+        <p>Puedes probar el funcionamiento aquí, los elementos que coincidan con el nombre de etiqueta que se le pasa
+            como parámetro obtendrán fondo azul</p>
+
+        <form onsubmit="selectElement(event)">
+            <input type="text" placeholder="Elemento" name="element" />
+            <button type="submit">Seleccionar</button>
+        </form>
+
+
+        <h4>Soy el único h4</h4>
+        <h5>Soy el único h5</h5>
+    </main>
+    <footer>
+        <p>Este ejemplo fue desarrollado por:</p>
+        <ul>
+            <li>Fredy Esteban Anaya Salazar</li>
+            <li>Jorge Andrés Martinez Varón</li>  
+            <li>Miguel Ángel Calambaz</li>
+            <li>Jhoan David Chacón</li>
+            <li>Esteban Santiago Escandón Causayá</li>
+        </ul>
+        <p>FIET - Universidad del Cauca
+            <br>
+            Ingeniería de Software III
+            <br>
+            2025
+        </p>
+        
+    </footer>
+</body>
+
+</html>
