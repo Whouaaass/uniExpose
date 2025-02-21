@@ -26,7 +26,7 @@ function handleSaveKey(e) {
     const key = e.target.elements.key.value;
     const value = e.target.elements.value.value;
     // set the key and value in localStorage
-    localStorage.setItem(key, value);
+    window.localStorage.setItem(key, value);
     // show the key and value in the label
     document.getElementById('localStorage-save-label').innerHTML = `Guardado\t${key}: ${value}`; 
 }
@@ -36,7 +36,7 @@ function handleReadKey(e) {
     // get the key from the form through the name attribute
     const key = e.target.elements.key.value;
     // get the value from localStorage
-    const value = localStorage.getItem(key);
+    const value = window.localStorage.getItem(key);
     // show the key and value in the label
     document.getElementById('localStorage-read-label').innerHTML = `Leído\r${key}: ${value}`;
 }
