@@ -33,8 +33,13 @@
             ejemplo, mediante el uso de TAB
         </p>
         <form onsubmit="noFormAction(event)">
-            <input type="text" onfocus="focusOnInput()" />
+            <input type="text" onfocus="focusOnInput()" placeholder="input" />
             <input type="checkbox" onfocus="focusOnCheckbox()" />
+            <textarea onfocus="focusOnTextarea()" placeholder="textarea"></textarea>
+            <select onfocus="focusOnSelect()">
+                <option>Select 1</option>
+                <option>Select 2</option>    
+            </select>
             <button onfocus="focusOnButton()">Foco en el button</button>
         </form>
         <p id="onfocus-label"></p>

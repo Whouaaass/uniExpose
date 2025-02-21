@@ -14,6 +14,10 @@ const focusOnButton = () => handleFocus('Foco en el button');
 
 const focusOnCheckbox = () => handleFocus('Foco en el checkbox');
 
+const focusOnTextarea = () => handleFocus('Foco en el textarea');
+
+const focusOnSelect = () => handleFocus('Foco en el select');
+
 // Ejemplo de evento onreset
 function handleReset() {
     document.getElementById('onreset-label').innerHTML = 'El formulario se ha restablecido';
